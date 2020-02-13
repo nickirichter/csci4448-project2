@@ -14,14 +14,18 @@ from Cat import Cat
 from Wolf import Wolf
 from Dog import Dog
 from Zookeeper import Zookeeper
+from ZooAnnouncer import ZooAnnouncer
 
 def main():
     zk = Zookeeper()
+
+    za = ZooAnnouncer(zk)
 
     zoo = []
 
     hippo1 = Hippo("Henry")
     hippo2 = Hippo("Hailey")
+
 
     zoo.append(hippo1)
     zoo.append(hippo2)
@@ -77,6 +81,8 @@ def main():
     zk.exercise(zoo)
     print("---------------------------------")
     zk.shutDownZoo(zoo)
+    zk.remove_observer(za)
+    del zk
 
       
   
