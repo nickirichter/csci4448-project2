@@ -15,7 +15,6 @@ from Wolf import Wolf
 from Dog import Dog
 from Zookeeper import Zookeeper
 
-
 def main():
     zk = Zookeeper()
 
